@@ -28,6 +28,14 @@ function onCount() {
 // ****** End Task: 02 ******
 
 // Task: 3) Image Switcher
+function toSwitchImage(value) {
+  let image = document.getElementById("fanImg");
+  if (value === "on") {
+    image.src = "./images/fan-on-2.gif";
+  } else {
+    image.src = "./images/fan-off-3.jpg";
+  }
+}
 
 // ****** End Task: 03 ******
 
