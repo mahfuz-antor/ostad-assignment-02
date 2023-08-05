@@ -19,6 +19,11 @@ function toChangeDOM() {
 // ****** End Task: 01 ******
 
 // Task: 2) Click Counter
+let counterText = document.getElementById("count");
+let num = 1;
+function onCount() {
+  counterText.innerText = num++;
+}
 
 // ****** End Task: 02 ******
 
