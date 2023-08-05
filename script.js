@@ -41,4 +41,11 @@ function toSwitchImage(value) {
 
 // Task: 4) Ajax
 
+let url = "https://jsonplaceholder.typicode.com/posts";
+async function getFetchingData() {
+  const response = await fetch(url);
+  const data = await response.json();
+  document.write(JSON.stringify(data));
+}
+
 // ****** End Task: 04 ******
