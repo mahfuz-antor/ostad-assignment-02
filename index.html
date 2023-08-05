@@ -3,27 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Assignment-02</title>
 </head>
 <body>
-    <!-- Task 01  -->
-    <div id="DOM">
-        <p id="domText">Click the the 'Task-01' button to change this DOM element.</p>
+    <h1 class="text-4xl font-bold text-center  bg-indigo-400 text-white py-5 px-5">Assignment-02</h1>
+    <div class="grid grid-cols-4 gap-5 justify-center item-center bg-indigo-200 h-screen">
+        <!-- Task 01  -->
+       <div class="bg-indigo-300 h-[350px] py-5 px-5 text-center">
+        <h1 class="text-3xl font-medium rounded-md bg-white text-indigo-500">Task: 01</h1>
+        <div class="text-center mx-auto" id="DOM">
+            <p class="text-lg my-2" id="domText">Click to the next button to change this DOM element.</p>
+        </div>
+        <button class="mx-auto bg-orange-400 hover:bg-orange-600 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white" id="domBtn" onclick="toChangeDOM()">Click Here</button>
+       </div>
+        
+       <!-- Task 02  -->
+        <div class="bg-indigo-300 text-center h-[350px] py-5 px-5">
+            <h1 class="text-3xl font-medium rounded-md bg-white text-indigo-500">Task: 02</h1>
+            <p class="my-5 text-lg">Count: <span id="count">0</span></p>
+            <button class="mx-auto bg-orange-400 hover:bg-orange-600 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white"  id="countBtn" onclick="onCount()">Count Number</button> <br> <br>
+        </div>
+        
+        <!-- Task 03  -->
+        <div class="bg-indigo-300 text-center h-[350px] py-5 px-5">
+            <h1 class="text-3xl font-medium rounded-md bg-white text-indigo-500">Task: 03</h1>
+            <img class="mx-auto py-3" id="fanImg" width="200px" height="200px" src="./images/fan-off-3.jpg" alt="Fan image">
+            <button class="mx-auto bg-orange-400 hover:bg-orange-600 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white"  id="fanOnBtn" onclick="toSwitchImage('on')">Switch On</button>
+            <button class="mx-auto bg-orange-400 hover:bg-orange-600 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white"  id="fanOffBtn" onclick="toSwitchImage('off')">Switch Off</button> <br>
+        </div>
+        
+        <!-- Task 04 -->
+        <div class="bg-indigo-300 text-center py-5 px-5 h-[350px] overflow-auto">
+            <h1 class="text-3xl font-medium rounded-md bg-white text-indigo-500">Task: 04</h1>
+            <div class="overflow-auto" id="fetchData"></div> <br> <br>
+            <button class="mx-auto bg-orange-400 hover:bg-orange-600 px-5 py-2.5 text-sm leading-5 rounded-md font-semibold text-white"  onclick="getFetchingData()">See Fetch Data</button> <br>
+        </div>
     </div>
-    <button id="domBtn" onclick="toChangeDOM()">Task-01</button>
-
-    <!-- Task 02  -->
-    <p>Count: <span id="count">0</span></p>
-    <button id="countBtn" onclick="onCount()">Count Number</button> <br> <br>
-
-    <!-- Task 03  -->
-    <img id="fanImg" width="300px" height="300px" src="./images/fan-off-3.jpg" alt="Fan image"> <br> <br>
-    <button id="fanOnBtn" onclick="toSwitchImage('on')">Click to On</button>
-    <button id="fanOffBtn" onclick="toSwitchImage('off')">Click to Off</button> <br> <br>
-
-    <!-- Task 04 -->
-
-    <button onclick="getFetchingData()">See Fetch Data</button>
     <!-- js file source  -->
     <script src="./script.js"></script>
 </body>

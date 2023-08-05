@@ -10,6 +10,7 @@ function toChangeDOM() {
   );
   image.setAttribute("width", "250px");
   image.setAttribute("height", "250px");
+  image.setAttribute("class", "mx-auto py-3");
 
   // changing the DOM element
   DOMText.innerHTML = "The DOM element has been changed!";
@@ -42,10 +43,11 @@ function toSwitchImage(value) {
 // Task: 4) Ajax
 
 let url = "https://jsonplaceholder.typicode.com/posts";
+let showingDiv = document.getElementById("fetchData");
 async function getFetchingData() {
   const response = await fetch(url);
   const data = await response.json();
-  document.write(JSON.stringify(data));
+  showingDiv.innerHTML = JSON.stringify(data);
 }
 
 // ****** End Task: 04 ******
